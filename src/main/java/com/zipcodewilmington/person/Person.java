@@ -6,30 +6,62 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private String eyeColor;
+
+    private double weight;
+    private String hairColor;
+    private double shoeSize;
+    private boolean isAlive;
 
     public Person() {
     }
 
     public Person(int age) {
+        setAge(age);
     }
 
     public Person(String name) {
+        setName(name);
     }
 
     public Person(String name, int age) {
+        setName(name);
+        setAge(age);
     }
 
     public void setName(String name) {
+        this.name = name;
     }
 
     public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setEyeColor(String eyeColor) {
+        this.eyeColor = eyeColor;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
+    }
+
+    public void setShoeSize(double shoeSize) {
+        this.shoeSize = shoeSize;
+    }
+
+    public void setAlive(boolean isAlive) {
+        this.isAlive = isAlive;
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 
     public Integer getAge() {
-        return null;
+        return age;
     }
 }
