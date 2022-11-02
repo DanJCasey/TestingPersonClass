@@ -14,6 +14,8 @@ public class Person {
     private boolean isAlive;
 
     public Person() {
+        name = "";
+        age = Integer.MAX_VALUE;
     }
 
     public Person(int age) {
