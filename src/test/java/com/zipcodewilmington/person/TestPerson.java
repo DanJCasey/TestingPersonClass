@@ -3,6 +3,8 @@ package com.zipcodewilmington.person;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by leon on 2/12/18.
  */
@@ -20,8 +22,8 @@ public class TestPerson {
         String actualName = person.getName();
         Integer actualAge = person.getAge();
 
-        Assert.assertEquals(expectedName, actualName);
-        Assert.assertEquals(expectedAge, actualAge);
+        assertEquals(expectedName, actualName);
+        assertEquals(expectedAge, actualAge);
     }
 
     @Test
@@ -34,7 +36,7 @@ public class TestPerson {
 
         // Then
         String actual = person.getName();
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -47,7 +49,7 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
 
@@ -64,8 +66,8 @@ public class TestPerson {
         Integer actualAge = person.getAge();
         String actualName = person.getName();
 
-        Assert.assertEquals(expectedAge, actualAge);
-        Assert.assertEquals(expectedName, actualName);
+        assertEquals(expectedAge, actualAge);
+        assertEquals(expectedName, actualName);
     }
 
     @Test
@@ -79,7 +81,7 @@ public class TestPerson {
         String actual = person.getName();
 
         // Then
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -93,6 +95,69 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetWeight() {
+        Person person = new Person();
+        double expected = 250.5;
+        double delta = 0.0;
+
+        person.setWeight(expected);
+
+        double actual = person.getWeight();
+        //assertEquals(expected, actual);
+        assertEquals(250.5, actual, delta);
+    }
+
+    @Test
+    public void testSetEyeColor() {
+        // Given
+        Person person = new Person();
+        String expected = "yellow";
+
+        // When
+        person.setEyeColor(expected);
+        String actual = person.getEyeColor();
+
+        // Then
+        assertEquals(expected, actual);
+
+
+    }
+    @Test
+    public void testSetIsAlive() {
+        Person person = new Person();
+        boolean expected = true;
+
+        person.setAlive(expected);
+        boolean actual = person.getIsAlive();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHairColor(){
+        Person person = new Person();
+        String expected = "Blue and Pink";
+
+        person.setHairColor(expected);
+        String actual = person.getHairColor();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetShoeSize() {
+        Person person = new Person();
+        double expected = 11;
+        double delta = 0;
+
+        person.setShoeSize(expected);
+        double actual = person.getShoeSize();
+
+        assertEquals(expected, actual, delta);
+    }
+
 }

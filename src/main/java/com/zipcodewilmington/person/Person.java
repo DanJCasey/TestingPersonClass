@@ -64,4 +64,24 @@ public class Person {
     public Integer getAge() {
         return age;
     }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public boolean getIsAlive() {
+        return isAlive;
+    }
+
+    public String getEyeColor() {
+        return eyeColor;
+    }
+
+    public String getHairColor() {
+        return hairColor;
+    }
+
+    public double getShoeSize() {
+        return shoeSize;
+    }
 }
